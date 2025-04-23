@@ -1,0 +1,3 @@
+Resume was added in here because I embedded the google doc URL and I was worried it would get broken when I submitted everything. 
+
+I wanted to just have it embedded in there for ease of update and it was a new trick I learned but I couldn't get it to load a file and I was running short on time.

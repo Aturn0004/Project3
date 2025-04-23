@@ -14,7 +14,6 @@
 /*body part. Wanted a different color from the header */
 body {
     background: linear-gradient(to left, #c8dbd7, #f5d4c3);
-    /* Optional: Add padding to prevent content from touching edges */
     padding: 0;
     margin: 0;
 }
@@ -25,10 +24,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-
+    border-bottom: 5px dotted #e9f1ef;
+    border-top: 5px dotted #e9f1ef;
+    margin-bottom: 50px;
 }
+
 /*fonts for header*/
-li, a, button {
+.nav_links, .nav_list, a, button {
     font-family: "DynaPuff", system-ui;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -40,20 +42,20 @@ li, a, button {
     text-decoration: none;
 }
 
-.nav_links {
+.nav_links, .nav_list {
     list-style-type: none;
 }
 /*nav links style*/
-.nav_links li {
+.nav_links, .nav_list {
     display: inline-flex;
     padding: 5px 15px;
 }
 
-.nav_links li a {
+.nav_links, .nav_list, a {
     transition: all 0.3s ease 0s; 
 }
 
-.nav_links li a:hover{
+.nav_links, .nav_list, a:hover{
     color: #c8dbd7; /*hover color same as main background only the text*/
 }
 
@@ -116,7 +118,6 @@ button:hover {
     opacity: 1;
 }
 
-
 .name {
     font-family: "Charm", cursive;
     letter-spacing: 2px;
@@ -168,38 +169,7 @@ button:hover {
     background-color: #f6efe7; /* Color of the hamburger bars */
     border-radius: 3px;
 }
-
-@media screen and (max-width: 938px) {
-    /*all the code for hamburger to show on mobile*/
-    .nav_links {
-        display: none;
-        width: 100%;
-        text-align: center;
-    }
-
-    .hamburger-menu {
-        display: flex;
-    }
-
-    .nav_links.active {
-        display: block;
-    }
-
-    .nav_links li {
-        display: block;
-        padding: 15px;
-    }
-
-    .cta button {
-        display: block;
-        margin-top: 10px;
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-}
-
-
-
+/*Mobile responsive CSS*/
 @media screen and (max-width: 938px) {
     .container {
         flex-direction: column; /* Stack vertically on mobile */
@@ -247,4 +217,139 @@ button:hover {
         display: block;
         padding: 15px;
     }
+
+    .nav_links {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav_links.active {
+        display: block;
+    }
+
+    .nav_links li {
+        display: block;
+        padding: 15px;
+    }
+
+    .cta button {
+        display: block;
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .service_section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bullet_point {
+        text-align: center; /* Optional, if you want it centered on mobile */
+    }
+
+    .Skill_title {
+        font-size: 48px;
+        margin-top: 60px;
+    }
+
+    .skills_img {
+        padding: 0 20px;
+    }
+
+    .skills_img img {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/*Service page CSS starts here*/
+.Serve_title {
+    font-family: "Charm", cursive;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-align: right;
+    font-size: 70px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    color: #3c5556;
+}
+
+.bullet_point {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3c5556;
+    padding: 10px;
+    margin: 10px;
+    text-align: right;
+    list-style-position: inside;
+    line-height: 1.6; /*Line spacing*/
+    letter-spacing: 0.5px; /*some space between letters*/
+}
+
+.bullet_point {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3c5556;
+    padding: 10px;
+    margin: 10px;
+    text-align: right;
+    list-style-position: inside;
+    line-height: 1.6; /*Line spacing*/
+    letter-spacing: 0.5px; /*some space between letters*/
+}
+
+.fireimg img, .virusimg img, .buildimg img {
+    display: flex;
+    justify-content: left;
+    border-radius: 50px;
+    border: 3px solid #f1f1f1;
+    padding: 0px;
+    border-radius: 50%; /*Makes it a perfect circle*/
+    width: 300px; /*set a fixed width*/
+    height: 300px; /*Set a fixed height*/
+    object-fit: cover;
+}
+/*This doesn't move how I want but its enough for now*/
+/*If I ever use this for my professional life fix it or if youve time*/
+.service_section {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    gap: 30px; 
+    margin-bottom: 40px; 
+}
+/*Service page CSS ends here*/
+
+/*skill page specifc CSS*/
+.Skill_title {
+    font-family: "Charm", cursive;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    color: #3c5556;
+}
+
+.skills_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.skills_img img {
+    width: 500px;
+    max-width: 90%; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
